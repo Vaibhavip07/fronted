@@ -1,0 +1,28 @@
+nav{
+    height: 50px;
+    width: auto;
+    background-color: cornsilk;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    
+}
+
+nav a{
+    margin-left: 80px;
+    font-size: 16px;
+    padding: 10px 18px;
+    color: #030a02;
+    font-family: sans-serif;
+    border-radius: 5px;
+    text-decoration:none;
+
+}
+
+nav a:hover{
+    background-color: #5d88d5;
+}
+nav a:active{
+    background-color: #000;
+    
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import HomeUi from './components/HomeUi';
+import AboutUi from './components/AboutUi';
+import InvoiceUi from './components/InvoiceUi';
+import AddUi from './components/AddUi';
+import Navigation from './components/Navigation';
+import UpdateUi from './components/UpdateUi';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div >
+      <Navigation/>
+      <Routes>
+        <Route path='/' element={<HomeUi/>}/>
+        <Route path='/home' element={<HomeUi/>}/>
+        <Route path='/about' element={<AboutUi/>}/>
+        <Route path='/invoice' element={<InvoiceUi/>}/>
+        <Route path='/addInvoice' element={<AddUi/>}/>
+        <Route path='/updateInvoice/:invoiceId' element={<UpdateUi/>}/>
+
+        </Routes>
     </div>
   );
 }
